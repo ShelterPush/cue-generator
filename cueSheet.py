@@ -88,7 +88,7 @@ for i in range(len(trackFile)):
         else:
             print('The track number must be a number between 0 and %s (inclusive).'%(len(trackFile)))
     # Make sure the number of digits is uniform
-    if len(str(number)) < len(str(len(trackFile))):
+    if len(str(number)) < 2: # Since there cannot be more than 99 tracks, make all track numbers exactly 2 digits
         strNumber = "0"+str(number)
     else:
         strNumber = str(number)
